@@ -3,11 +3,11 @@
 * gripper control (done)
 * image processing
   * receive image(done)
-  * process image(haly way)
-  * recognize normal ball(trying)
+  * process image(halyway)
+  * recognize a ball (using circle hough transformation)
   * recognize fruit(trying)
-* arm control (have not start)
+* arm control (have not started)
   * inverse kinematic transformation
   * offset values
-    * camera-baxter offset
+    * camera-Baxter offset
     * arm offset
