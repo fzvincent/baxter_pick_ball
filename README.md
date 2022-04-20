@@ -7,3 +7,7 @@
   * recognize normal ball(trying)
   * recognize fruit(trying)
 * arm control (have not start)
+  * inverse kinematic transformation
+  * offset values
+    * camera-baxter offset
+    * arm offset
