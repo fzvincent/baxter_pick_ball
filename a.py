@@ -80,9 +80,9 @@ def main():
     
     ballpick.gripper.open()
 
-    ballpick.pose = (ballpick.golf_ball_x,
-                    ballpick.golf_ball_y,
-                    ballpick.golf_ball_z,
+    ballpick.pose = (ballpick.x,
+                    ballpick.y,
+                    ballpick.z,
                     ballpick.roll,
                     ballpick.pitch,
                     ballpick.yaw)
