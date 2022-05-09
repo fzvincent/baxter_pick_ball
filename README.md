@@ -1,7 +1,7 @@
 # baxter_pick_ball
 
-using opencv hough circle to find the ball, move the arm horizontically close to it.
-repeat this process until the position of the ball in the middle of the image.
+using opencv hough circle to find the ball
+based on the predefined parameter to generate arm offset
 execute picking
 
 * gripper control 
