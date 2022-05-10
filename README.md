@@ -1,4 +1,5 @@
 # baxter_pick_ball
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/Pw_PhkqKUx4/0.jpg)](https://www.youtube.com/watch?v=Pw_PhkqKUx4)
 
 using opencv hough circle to find the ball
 
