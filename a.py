@@ -96,7 +96,7 @@ class locate():
         self.height = 800
         self.pose_adj_x = 0.0
         self.pose_adj_y = 0.0
-
+        self.target=[350,150]
         # Hough circle accumulator threshold and minimum radius.
         self.hough_accumulator = 35
         self.hough_min_radius = 15
@@ -454,12 +454,11 @@ class locate():
             print('ball', ball)
 
             # find displacement of ball from centre of image
-            while np.linalg.norm(ball[0, 1] - [self.widtd / 2, self.height / 2]) < 10:
-                pixel_dx = (self.width / 2) - ball[0]
-                pixel_dy = (self.height / 2) - ball[1]
-                pixel_error = math.sqrt((pixel_dx * pixel_dx) + (pixel_dy * pixel_dy))
+            while np.linalg.norm(ball[0, 1] - self.target) > 10:
+                pixel_dx = self.target[0] - ball[0]
+                pixel_dy = self.target[1] - ball[1]
 
-                x_offset = - pixel_dy * self.cam_calib * self.tray_distance
+                x_offset = + pixel_dy * self.cam_calib * self.tray_distance
                 y_offset = - pixel_dx * self.cam_calib * self.tray_distance
 
                 # update pose and find new ball data
@@ -477,8 +476,8 @@ class locate():
                 self.limb_interface.set_joint_position_speed(0.1)
                 self.baxter_ik_move(self.limb, self.pose)
 
-            pose = (self.pose[0] + self.cam_y_offset + 0.127,  # 10
-                    self.pose[1] + self.cam_x_offset + 0.05,  # 09   #
+            pose = (self.pose[0],
+                    self.pose[1],
                     self.pose[2] - 0.27,
                     self.pose[3],
                     self.pose[4]
