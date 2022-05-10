@@ -3,9 +3,9 @@
 
 using opencv hough circle to find the ball
 
-repeatedly measure the distance between the ball and target point in the image, and offset the limb's position
+repeatedly measure the distance between the ball and target point in the image, and offset the limb's position to decrease the distance
 
-execute picking
+execute ball picking
 
 * gripper control 
 * image processing
